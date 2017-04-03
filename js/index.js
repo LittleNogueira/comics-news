@@ -62,6 +62,8 @@ function pesquisaNoticia(pesquisa){
 			if(result != 0){
 				var html = "";
 				$.each(result, function(index,noticia){
+					
+					var data = noticia.data.split(" ");
 
 					html += "  <div class='col s12 m6 l3'>"+
     							"<div class='card  hoverable' >"+
@@ -69,8 +71,10 @@ function pesquisaNoticia(pesquisa){
         								"<img height='230px' src='images/"+ noticia.img +"'>"+
         								"<span class='card-title'>"+ noticia.titulo +"</span>"+
       								"</div>"+
-                                	"<div class='card-content'>"+
-        							"<p>"+noticia.descricao.substring(0, 120) + "..."+"</p>"+
+                        "<div class='card-content'>"+
+												"<p><strong>Autor(a)</strong> : "+noticia.autor+"</p>"+
+												"<p><strong>Postado</strong> : "+data[0]+"</p><br>"+
+        							"<p>"+noticia.descricao.substring(0, 80) + "..."+"</p>"+
       								"</div>"+
       								"<div class='card-action'>"+
         								"<a href='visualizar.html?id="+noticia.ID+"''>Detalhes</a>"+
