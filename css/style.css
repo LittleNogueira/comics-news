@@ -17,3 +17,21 @@
 	box-shadow: none;
 	color: #444;
 }
+.detalhes-noticia{
+	position: relative;
+	text-align: center;
+	padding-bottom: 40px;
+	padding-top: 10px;
+ }
+@media (max-width: 600px)
+{
+  .detalhes-noticia{
+		position: relative;
+		text-align: center;
+		padding-bottom: 0px;
+   }
+
+	 .remove-float{
+		 float:none !important;
+	 }
+}
