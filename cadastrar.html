@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ComicsNews</title>
+
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="navbar-site"></header>
+
+    <section id="register" class="container">
+
+        <h4 class="center">Cadastrar notícia</h4>
+        <div class="divider"></div><br>
+
+        <form class="col s12" method="post" id="form-registerNews" enctype="multipart/form-data" >
+            <div class="row">
+
+                <div class="input-field col s12">
+                    <input id="autor" name="autor" type="text" onkeyup="isInvalid(this)" >
+                    <label for="autor" >Autor</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input id="titulo" name="titulo" type="text" onkeyup="isInvalid(this)" >
+                    <label for="titulo">Título</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <textarea id="descricao" name="descricao" class="materialize-textarea" onkeyup="isInvalid(this)" ></textarea>
+                    <label for="descricao">Descrição</label>
+                </div>
+
+            </div>
+
+            <div class="file-field input-field">
+
+                <div class="btn">
+                    <span>Imagem</span>
+                    <input name="image" type="file" id="img" >
+                </div>
+
+                <div class="file-path-wrapper">
+                    <input class="file-path" type="text" onchange="isInvalid(this)">
+                </div>
+
+            </div>
+        </form><br>
+
+        <a id="btnPostar" class="waves-effect waves-light btn ">postar</a>
+        <a id="btnCancelar" class="waves-effect waves-light btn red" href="#dialogCancelar">cancelar</a>
+
+    </section>
+
+    <div id="dialogCancelar" class="modal">
+      <div class="modal-content">
+        <h4>: (</h4>
+        <p>Deseja realmente cancelar?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        <a href="index.html" class="modal-action waves-effect waves-green btn-flat">Confirmar</a>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/cadastrar.js"></script>
+    <script type="text/javascript" src="js/navbar.js" ></script>
+
+</body>
+
+</html>
