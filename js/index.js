@@ -19,6 +19,7 @@ function listaNoticias(){
 				$.each(result, function(index,noticia){
 
 					var data = noticia.data.split(" ");
+					data = data[0].split("-");
 
 					html += "  <div class='col s12 m6 l3'>"+
     							"<div class='card  hoverable' >"+
@@ -28,7 +29,7 @@ function listaNoticias(){
       								"</div>"+
                         "<div class='card-content'>"+
 												"<p><strong>Autor(a)</strong> : "+noticia.autor+"</p>"+
-												"<p><strong>Postado</strong> : "+data[0]+"</p><br>"+
+												"<p><strong>Postado</strong> : "+data[2]+"/"+data[1]+"/"+data[0]+"</p><br>"+
         							"<p>"+noticia.descricao.substring(0, 80) + "..."+"</p>"+
       								"</div>"+
       								"<div class='card-action'>"+
@@ -62,8 +63,9 @@ function pesquisaNoticia(pesquisa){
 			if(result != 0){
 				var html = "";
 				$.each(result, function(index,noticia){
-					
+
 					var data = noticia.data.split(" ");
+					data = data[0].split("-");
 
 					html += "  <div class='col s12 m6 l3'>"+
     							"<div class='card  hoverable' >"+
@@ -73,7 +75,7 @@ function pesquisaNoticia(pesquisa){
       								"</div>"+
                         "<div class='card-content'>"+
 												"<p><strong>Autor(a)</strong> : "+noticia.autor+"</p>"+
-												"<p><strong>Postado</strong> : "+data[0]+"</p><br>"+
+												"<p><strong>Postado</strong> : "+data[2]+"/"+data[1]+"/"+data[0]+"</p><br>"+
         							"<p>"+noticia.descricao.substring(0, 80) + "..."+"</p>"+
       								"</div>"+
       								"<div class='card-action'>"+
