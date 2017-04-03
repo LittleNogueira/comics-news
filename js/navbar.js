@@ -1,8 +1,8 @@
-var nav = 
+var nav =
     "<nav>"+
     "<div class='nav-wrapper blue darken-3'>"+
         "<div class='container'>"+
-            "<a href='index.html' class='brand-logo'><font class='Gloria-Hallelujah' >Comics</font>News</a>"+
+            "<a href='index.html' class='brand-logo'><font class='Gloria-Hallelujah' >Comics</font><font class='Raleway'>news</font></a>"+
             "<a href='#' data-activates='mobile-demo' class='button-collapse'><i class='material-icons'>menu</i></a>"+
             "<ul class='right hide-on-med-and-down'>"+
                 "<li><a href='index.html'>Home</a></li>"+
